@@ -1,19 +1,105 @@
+@import "libs/minireset.scss";
+@import 'libs/Fonts.scss';
+
 .premierbloc {
     
     display: grid;
     width: 1440px;
-    height: 400px;
+    height: 800px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
+
+    .tuile {
+        background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/header.jpg?raw=true");
+        background-size: cover; 
+        background-position: center; 
+
+        h1 {
+            font-family:'Fraunces';
+            color: #FFFFFF;
+            font-size: 5rem;
+            text-align: center;
+        }
+    }
 }
 
 .deuxiemebloc {
     
     display: grid;
     width: 1440px;
-    height: 900px;
+    height: 1800px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+
+
+    .tuile {
+
+        h2 {
+            color: #24303E;
+            font-family: 'Fraunces';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 40px;
+            letter-spacing: -0.285714px;
+        }
+
+        h3 {
+
+            color: #052C3B;
+            font-family: 'Fraunces';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 28px;
+            line-height: 35px;
+            text-align: center;
+            letter-spacing: -0.2px;
+        }
+
+        p {
+            color: #808397;
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: -0.128571px;
+        }
+
+        .text {
+            color: #19536C;
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            letter-spacing: -0.114286px;
+
+        }
+
+        
+    }
+        .tuile:nth-child(2) {
+            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/egg.jpg?raw=true");
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .tuile:nth-child(3) {
+            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/glass.jpg?raw=true");
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .tuile:nth-child(5) {
+            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/cherry.jpg?raw=true");
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .tuile:nth-child(6) {
+            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/mandarine.jpeg?raw=true");
+            background-size: cover; 
+            background-position: center; 
+        }
 }
 
 .troisiemebloc {
@@ -33,6 +119,30 @@
     height: 447px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
+
+        .tuile:nth-child(1) {
+            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/gallery-milkbottles.jpg?raw=true");
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .tuile:nth-child(2) {
+            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/gallery-orange.jpg?raw=true");
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .tuile:nth-child(3) {
+            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/gallery-cone.jpg?raw=true");
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .tuile:nth-child(4) {
+            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/gallery-sugarcubes.jpg?raw=true");
+            background-size: cover; 
+            background-position: center; 
+        }
 }
 
 .cinquiemebloc {
@@ -42,12 +152,21 @@
     height: 350px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
+
+    .tuile{
+       
+        background-color: #90D4C6;
+        border: solid black 1px;
+    }
+
+    li {
+        display:inline;
+    }
+
+    
 }
 
 .tuile{
        
-    background-color: yellow;
-    border: solid black 1px;
-
-
+    border: none;
 }

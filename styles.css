@@ -1,17 +1,130 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
 .premierbloc {
   display: grid;
   width: 1440px;
-  height: 400px;
+  height: 800px;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
+}
+.premierbloc .tuile {
+  background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/header.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+.premierbloc .tuile h1 {
+  font-family: "Fraunces";
+  color: #FFFFFF;
+  font-size: 5rem;
+  text-align: center;
 }
 
 .deuxiemebloc {
   display: grid;
   width: 1440px;
-  height: 900px;
+  height: 1800px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
+}
+.deuxiemebloc .tuile h2 {
+  color: #24303E;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: -0.285714px;
+}
+.deuxiemebloc .tuile h3 {
+  color: #052C3B;
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: -0.2px;
+}
+.deuxiemebloc .tuile p {
+  color: #808397;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.128571px;
+}
+.deuxiemebloc .tuile .text {
+  color: #19536C;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -0.114286px;
+}
+.deuxiemebloc .tuile:nth-child(2) {
+  background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/egg.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+.deuxiemebloc .tuile:nth-child(3) {
+  background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/glass.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+.deuxiemebloc .tuile:nth-child(5) {
+  background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/cherry.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+.deuxiemebloc .tuile:nth-child(6) {
+  background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/mandarine.jpeg?raw=true");
+  background-size: cover;
+  background-position: center;
 }
 
 .troisiemebloc {
@@ -29,6 +142,26 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
 }
+.quatriemebloc .tuile:nth-child(1) {
+  background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/gallery-milkbottles.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+.quatriemebloc .tuile:nth-child(2) {
+  background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/gallery-orange.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+.quatriemebloc .tuile:nth-child(3) {
+  background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/gallery-cone.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+.quatriemebloc .tuile:nth-child(4) {
+  background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/gallery-sugarcubes.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
 
 .cinquiemebloc {
   display: grid;
@@ -37,10 +170,16 @@
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
 }
+.cinquiemebloc .tuile {
+  background-color: #90D4C6;
+  border: solid black 1px;
+}
+.cinquiemebloc li {
+  display: inline;
+}
 
 .tuile {
-  background-color: yellow;
-  border: solid black 1px;
+  border: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
