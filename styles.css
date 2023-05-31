@@ -1,0 +1,46 @@
+.premierbloc {
+  display: grid;
+  width: 1440px;
+  height: 400px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.deuxiemebloc {
+  display: grid;
+  width: 1440px;
+  height: 900px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.troisiemebloc {
+  display: grid;
+  width: 1440px;
+  height: 400px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.quatriemebloc {
+  display: grid;
+  width: 1440px;
+  height: 447px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.cinquiemebloc {
+  display: grid;
+  width: 1440px;
+  height: 350px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.tuile {
+  background-color: yellow;
+  border: solid black 1px;
+}
+
+/*# sourceMappingURL=styles.css.map */
