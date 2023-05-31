@@ -75,6 +75,16 @@
 
         }
 
+        a {
+            text-decoration: none;
+
+            &::after {
+                content: hr;
+                color: red;
+                font-weight: bold;
+            }
+        }
+
         
     }
         .tuile:nth-child(2) {

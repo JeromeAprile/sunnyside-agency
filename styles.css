@@ -106,6 +106,14 @@ td, th {
   text-align: center;
   letter-spacing: -0.114286px;
 }
+.deuxiemebloc .tuile a {
+  text-decoration: none;
+}
+.deuxiemebloc .tuile a::after {
+  content: hr;
+  color: red;
+  font-weight: bold;
+}
 .deuxiemebloc .tuile:nth-child(2) {
   background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/egg.jpg?raw=true");
   background-size: cover;
