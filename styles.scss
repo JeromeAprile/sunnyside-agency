@@ -1,11 +1,13 @@
-@import "libs/minireset.scss";
-@import 'libs/Fonts.scss';
+@import "libs/_minireset.scss";
+@import 'libs/_fonts.scss';
+@import 'libs/_placeholders.scss';
+@import 'libs/mixins';
 
 .premierbloc {
     
     display: grid;
-    width: 1440px;
-    height: 800px;
+    width: 100vw;
+    height: 100vh;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
 
@@ -13,120 +15,334 @@
         background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/header.jpg?raw=true");
         background-size: cover; 
         background-position: center; 
+        
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: auto;
+            margin-top: 1.5%;
+        }
+
+        .logo {
+            margin-left: 3%;
+            
+        }
+
+        li {
+            display: inline;
+        }
+
+        .links-list {
+            display: flex;
+            justify-content: space-around; 
+            align-items: center; 
+            flex-direction: row;
+            margin-right: 3%;
+          }
+
+        button {
+            background-color: transparent;
+            font-family: 'Barlow';
+            color: #FFFFFF;
+            font-size: 15px;
+            width: 140px;
+            height: 56px;
+            border-radius: 28px;
+            border: 1px solid transparent;
+            letter-spacing: -0.107143px;
+        
+            &:hover {
+                font-family: "fraunces";
+                background-color: #FFFFFF;
+                border: 1px solid #FFFFFF;
+                color: #24303E;
+                text-transform: uppercase;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
         h1 {
             font-family:'Fraunces';
             color: #FFFFFF;
+            font-weight: bold;
             font-size: 5rem;
             text-align: center;
+            padding: 100px;
         }
+
+        .elements1 {
+            @extend %column-center-center;
+            height: auto;
+
+            img {
+                margin-top: -30px;
+            }
+        }
+
+
     }
 }
+
+
+
 
 .deuxiemebloc {
     
     display: grid;
-    width: 1440px;
+    width: 100vw;
     height: 1800px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
 
 
+    .tuile:nth-child(-n+4) {
+        @extend %column-center-center;
+    }
+
+    .tuile:nth-child(5),
+    .tuile:nth-child(6)  {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
     .tuile {
 
-        h2 {
-            color: #24303E;
-            font-family: 'Fraunces';
-            font-style: normal;
-            font-weight: 900;
-            font-size: 40px;
-            letter-spacing: -0.285714px;
-        }
+        .tuiletexte1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 65%;
+            row-gap: 40px;
+            text-align: left;
 
-        h3 {
 
-            color: #052C3B;
-            font-family: 'Fraunces';
-            font-style: normal;
-            font-weight: 900;
-            font-size: 28px;
-            line-height: 35px;
-            text-align: center;
-            letter-spacing: -0.2px;
-        }
+            h2 {
+                color: #24303E;
+                font-family: 'Fraunces';
+                font-style: normal;
+                font-weight: 900;
+                line-height: 49px;
+                font-size: 40px;
+                letter-spacing: -0.285714px;
+                padding-right: 100px;
 
-        p {
-            color: #808397;
-            font-family: 'Barlow';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            letter-spacing: -0.128571px;
-        }
-
-        .text {
-            color: #19536C;
-            font-family: 'Barlow';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            text-align: center;
-            letter-spacing: -0.114286px;
-
-        }
-
-        a {
-            text-decoration: none;
-
-            &::after {
-                content: hr;
-                color: red;
-                font-weight: bold;
+    
             }
+    
+            p {
+                color: #808397;
+                font-family: 'Barlow';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                letter-spacing: -0.128571px;
+                padding-right: 20px;
+
+
+            }
+    
+            a {
+                text-decoration: none;
+                color: inherit;
+                display: inline;
+                position:relative;
+                font-family: 'Fraunces 9pt Soft';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 15px;
+                line-height: 167%;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #24303E;
+            }
+
+  
         }
 
+
+        .learnmore1::after {
+            position: absolute;
+            content: "";
+            bottom: 5px;
+            left: -5px;
+            width: 122.5px;
+            height: 7.5px; 
+            border-radius: 5px;
+            background-color: #FAD400;
+            z-index: -1;
+            
+        } 
+
+        .learnmore2::after {
+            position: absolute;
+            content: "";
+            bottom: 5px;
+            left: -5px;
+            width: 122.5px;
+            height: 7.5px; 
+            border-radius: 5px;
+            background-color: #FE7766;
+            z-index: -1;
+            
+        } 
+
+    }
+
+        .tuiletexte2 {
+            @extend %column-center-center;
+            width: 50%;
+            row-gap: 40px;
+            text-align: center;
+            margin-bottom: 10%;
+
+
+            h3 {
+
+                color: #052C3B;
+                font-family: 'Fraunces';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 28px;
+                line-height: 35px;
+                text-align: center;
+                letter-spacing: -0.2px;
+            }
+    
+            .text {
+                color: #19536C;
+                font-family: 'Barlow';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                text-align: center;
+                letter-spacing: -0.114286px;
+    
+            }
+
+        }
+        
         
     }
         .tuile:nth-child(2) {
-            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/egg.jpg?raw=true");
-            background-size: cover; 
-            background-position: center; 
+            @include background-img-cover-center ("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/egg.jpg?raw=true")
         }
 
         .tuile:nth-child(3) {
-            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/glass.jpg?raw=true");
-            background-size: cover; 
-            background-position: center; 
+            @include background-img-cover-center ("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/glass.jpg?raw=true")
         }
 
         .tuile:nth-child(5) {
-            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/cherry.jpg?raw=true");
-            background-size: cover; 
-            background-position: center; 
+            @include background-img-cover-center ("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/cherry.jpg?raw=true")
         }
 
         .tuile:nth-child(6) {
-            background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/mandarine.jpeg?raw=true");
-            background-size: cover; 
-            background-position: center; 
+            @include background-img-cover-center ("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/mandarine.jpeg?raw=true")
         }
-}
+
+
 
 .troisiemebloc {
     
     display: grid;
-    width: 1440px;
-    height: 400px;
+    width: 100vw;
+    height: 100vh;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
+
+
+    .tuile {
+        @extend %column-center-center;
+
+
+
+        .titre {
+            font-family: "Fraunces";
+            font-weight:bolder;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            letter-spacing: 5px;
+            color: #A7AAAD;
+
+        }
+
+        .personnes {
+            margin-top: 7.5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        
+
+    }
+
+    .individu {
+        @extend %column-center-center;
+        width: 30%;
+        row-gap: 20px;
+
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .description {
+
+            margin: 10%;
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 32px;
+            text-align: center;
+            letter-spacing: -0.128571px;
+            color: #5B636D;
+
+        }
+
+        .name {
+            font-family: 'Fraunces 9pt Soft';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: -0.128571px;
+            color: #24303E;
+        }
+
+        .poste {
+            font-family: 'Barlow';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 25px;
+            text-align: center;
+            letter-spacing: -0.1px;
+            color: #A7AAAD;
+            
+        }
+    }
+
 }
 
 
 .quatriemebloc {
     
     display: grid;
-    width: 1440px;
-    height: 447px;
+    width: 100vw;
+    height: 50vh;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
 
@@ -158,25 +374,64 @@
 .cinquiemebloc {
     
     display: grid;
-    width: 1440px;
-    height: 350px;
+    width: 100vw;
+    height: 50vh;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
 
     .tuile{
        
         background-color: #90D4C6;
-        border: solid black 1px;
-    }
+        @extend %column-center-center;
 
-    li {
-        display:inline;
-    }
 
+        .footerelements {
+
+            @extend %column-center-center;
+            width: 50%;
+
+            .footerlogo {
+               fill: #24303E;
+            }
+
+            a {
+                text-decoration: none;
+                color: #458D7E;
+                font-weight: bold;
+            }
+
+            .links {
+                margin-top: 7.5%;
     
+                li {
+                    display:inline;
+                }
+                
+                li:nth-child(2),
+                li:nth-child(3) {
+                    padding-left: 30px;
+                }
+
+
+            }
+    
+            .socialsmedia {
+                margin-top: 15%;
+    
+                li {
+                    display:inline;
+                    font-family: "Barlow";
+                }
+
+                li:nth-child(2),
+                li:nth-child(3),
+                li:nth-child(4) {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+
 }
 
-.tuile{
-       
-    border: none;
-}
+   

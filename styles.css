@@ -45,10 +45,17 @@ td, th {
   padding: 0;
 }
 
+.cinquiemebloc .tuile .footerelements, .cinquiemebloc .tuile, .troisiemebloc .individu, .troisiemebloc .tuile, .deuxiemebloc .tuiletexte2, .deuxiemebloc .tuile:nth-child(-n+4), .premierbloc .tuile .elements1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .premierbloc {
   display: grid;
-  width: 1440px;
-  height: 800px;
+  width: 100vw;
+  height: 100vh;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
 }
@@ -57,29 +64,147 @@ td, th {
   background-size: cover;
   background-position: center;
 }
+.premierbloc .tuile nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  margin-top: 1.5%;
+}
+.premierbloc .tuile .logo {
+  margin-left: 3%;
+}
+.premierbloc .tuile li {
+  display: inline;
+}
+.premierbloc .tuile .links-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 3%;
+}
+.premierbloc .tuile button {
+  background-color: transparent;
+  font-family: "Barlow";
+  color: #FFFFFF;
+  font-size: 15px;
+  width: 140px;
+  height: 56px;
+  border-radius: 28px;
+  border: 1px solid transparent;
+  letter-spacing: -0.107143px;
+}
+.premierbloc .tuile button:hover {
+  font-family: "fraunces";
+  background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  color: #24303E;
+  text-transform: uppercase;
+}
+.premierbloc .tuile a {
+  text-decoration: none;
+  color: inherit;
+}
 .premierbloc .tuile h1 {
   font-family: "Fraunces";
   color: #FFFFFF;
+  font-weight: bold;
   font-size: 5rem;
   text-align: center;
+  padding: 100px;
+}
+.premierbloc .tuile .elements1 {
+  height: auto;
+}
+.premierbloc .tuile .elements1 img {
+  margin-top: -30px;
 }
 
 .deuxiemebloc {
   display: grid;
-  width: 1440px;
+  width: 100vw;
   height: 1800px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
-.deuxiemebloc .tuile h2 {
+.deuxiemebloc .tuile:nth-child(5),
+.deuxiemebloc .tuile:nth-child(6) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.deuxiemebloc .tuile .tuiletexte1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 65%;
+  row-gap: 40px;
+  text-align: left;
+}
+.deuxiemebloc .tuile .tuiletexte1 h2 {
   color: #24303E;
   font-family: "Fraunces";
   font-style: normal;
   font-weight: 900;
+  line-height: 49px;
   font-size: 40px;
   letter-spacing: -0.285714px;
+  padding-right: 100px;
 }
-.deuxiemebloc .tuile h3 {
+.deuxiemebloc .tuile .tuiletexte1 p {
+  color: #808397;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.128571px;
+  padding-right: 20px;
+}
+.deuxiemebloc .tuile .tuiletexte1 a {
+  text-decoration: none;
+  color: inherit;
+  display: inline;
+  position: relative;
+  font-family: "Fraunces 9pt Soft";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 167%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24303E;
+}
+.deuxiemebloc .tuile .learnmore1::after {
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  left: -5px;
+  width: 122.5px;
+  height: 7.5px;
+  border-radius: 5px;
+  background-color: #FAD400;
+  z-index: -1;
+}
+.deuxiemebloc .tuile .learnmore2::after {
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  left: -5px;
+  width: 122.5px;
+  height: 7.5px;
+  border-radius: 5px;
+  background-color: #FE7766;
+  z-index: -1;
+}
+.deuxiemebloc .tuiletexte2 {
+  width: 50%;
+  row-gap: 40px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+.deuxiemebloc .tuiletexte2 h3 {
   color: #052C3B;
   font-family: "Fraunces";
   font-style: normal;
@@ -89,15 +214,7 @@ td, th {
   text-align: center;
   letter-spacing: -0.2px;
 }
-.deuxiemebloc .tuile p {
-  color: #808397;
-  font-family: "Barlow";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  letter-spacing: -0.128571px;
-}
-.deuxiemebloc .tuile .text {
+.deuxiemebloc .tuiletexte2 .text {
   color: #19536C;
   font-family: "Barlow";
   font-style: normal;
@@ -106,30 +223,26 @@ td, th {
   text-align: center;
   letter-spacing: -0.114286px;
 }
-.deuxiemebloc .tuile a {
-  text-decoration: none;
-}
-.deuxiemebloc .tuile a::after {
-  content: hr;
-  color: red;
-  font-weight: bold;
-}
-.deuxiemebloc .tuile:nth-child(2) {
+
+.tuile:nth-child(2) {
   background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/egg.jpg?raw=true");
   background-size: cover;
   background-position: center;
 }
-.deuxiemebloc .tuile:nth-child(3) {
+
+.tuile:nth-child(3) {
   background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/glass.jpg?raw=true");
   background-size: cover;
   background-position: center;
 }
-.deuxiemebloc .tuile:nth-child(5) {
+
+.tuile:nth-child(5) {
   background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/cherry.jpg?raw=true");
   background-size: cover;
   background-position: center;
 }
-.deuxiemebloc .tuile:nth-child(6) {
+
+.tuile:nth-child(6) {
   background-image: url("https://github.com/JeromeAprile/sunnyside-agency/blob/main/img/mandarine.jpeg?raw=true");
   background-size: cover;
   background-position: center;
@@ -137,16 +250,73 @@ td, th {
 
 .troisiemebloc {
   display: grid;
-  width: 1440px;
-  height: 400px;
+  width: 100vw;
+  height: 100vh;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
+}
+.troisiemebloc .tuile .titre {
+  font-family: "Fraunces";
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #A7AAAD;
+}
+.troisiemebloc .tuile .personnes {
+  margin-top: 7.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.troisiemebloc .individu {
+  width: 30%;
+  row-gap: 20px;
+}
+.troisiemebloc .individu img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+.troisiemebloc .individu .description {
+  margin: 10%;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -0.128571px;
+  color: #5B636D;
+}
+.troisiemebloc .individu .name {
+  font-family: "Fraunces 9pt Soft";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.128571px;
+  color: #24303E;
+}
+.troisiemebloc .individu .poste {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  color: #A7AAAD;
 }
 
 .quatriemebloc {
   display: grid;
-  width: 1440px;
-  height: 447px;
+  width: 100vw;
+  height: 50vh;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
 }
@@ -173,21 +343,46 @@ td, th {
 
 .cinquiemebloc {
   display: grid;
-  width: 1440px;
-  height: 350px;
+  width: 100vw;
+  height: 50vh;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
 }
 .cinquiemebloc .tuile {
   background-color: #90D4C6;
-  border: solid black 1px;
 }
-.cinquiemebloc li {
+.cinquiemebloc .tuile .footerelements {
+  width: 50%;
+}
+.cinquiemebloc .tuile .footerelements .footerlogo {
+  fill: #24303E;
+}
+.cinquiemebloc .tuile .footerelements a {
+  text-decoration: none;
+  color: #458D7E;
+  font-weight: bold;
+}
+.cinquiemebloc .tuile .footerelements .links {
+  margin-top: 7.5%;
+}
+.cinquiemebloc .tuile .footerelements .links li {
   display: inline;
 }
-
-.tuile {
-  border: none;
+.cinquiemebloc .tuile .footerelements .links li:nth-child(2),
+.cinquiemebloc .tuile .footerelements .links li:nth-child(3) {
+  padding-left: 30px;
+}
+.cinquiemebloc .tuile .footerelements .socialsmedia {
+  margin-top: 15%;
+}
+.cinquiemebloc .tuile .footerelements .socialsmedia li {
+  display: inline;
+  font-family: "Barlow";
+}
+.cinquiemebloc .tuile .footerelements .socialsmedia li:nth-child(2),
+.cinquiemebloc .tuile .footerelements .socialsmedia li:nth-child(3),
+.cinquiemebloc .tuile .footerelements .socialsmedia li:nth-child(4) {
+  padding-left: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
